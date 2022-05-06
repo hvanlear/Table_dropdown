@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="data-list-temp-style.css" />
+    <title>Data List Template</title>
+  </head>
+  <body>
+    <div class="app-container d-flex flex-row" "="">
+    <div class="sidebar">
+      <img src="processmaker_icon.png" class="pt-3 ml-1" alt="" />
+    </div>
+    <div class="main d-flex flex-grow-1 flex-column overflow-hidden">
+      <div class="top-nav flex-grow-1">
+        <div class="flex-grow-1">
+          <div id="navbar">
+            <nav
+              class="navbar d-print-none navbar-light navbar-expand-lg"
+              id="navbar1"
+            >
+              <div class="d-flex d-lg-none w-100">
+                <a href="#" target="_self" class="navbar-brand d-lg-none pl-2"
+                  ><img
+                    src="https://madidi-release.processmaker.net/img/processmaker-login.svg?id=addb6c8b47dc100de38923db9844a7bb"
+                    class="navbar-logo"
+                /></a>
+                <button
+                  type="button"
+                  class="navbar-toggler ml-auto collapsed"
+                  style="overflow-anchor: none"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+              <div id="nav-collapse" class="navbar-collapse collapse">
+                <!---->
+                <!---->
+                <!---->
+                <ul
+                  class="navbar-nav d-flex align-items-center"
+                  style="/* z-index: 100; */"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link"><span>Requests</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"><span>Tasks</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"><span>Designer</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"><span>Admin</span></a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav d-flex align-items-center ml-auto">
+                  <li class="nav-item p-2">
+                    <button class="btn btn-success btn-sm">
+                      <i class="fas fa-plus"></i>
+                      Request
+                    </button>
+                    <!---->
+                  </li>
+                  <li class="nav-item d-none d-lg-block">
+                    <div>
+                      <button class="btn nav-link count-info btn-link">
+                        <i class="fas fa-bell fa-lg font-size-23"></i>
+                        <!---->
+                        <span class="badge badge-danger badge-pill">9+</span>
+                      </button>
+                      <!---->
+                    </div>
+                  </li>
+                  <li class="separator d-none d-lg-block"></li>
+                  <li class="d-none d-lg-block">
+                    <div id="userMenu">
+                      <div id="profileMenu">
+                        <span
+                          ><button
+                            class="btn avatar-button rounded-circle overflow-hidden p-0 m-0 d-inline-flex border-0 btn-info"
+                          >
+                            <span
+                              class="border-0 d-inline-flex align-items-center justify-content-center text-white text-uppercase text-nowrap font-weight-normal"
+                              style="
+                                width: 40px;
+                                height: 40px;
+                                font-size: 16px;
+                                padding: 0px;
+                                cursor: pointer;
+                              "
+                              >AU</span
+                            >
+                          </button>
+                          <!----></span
+                        >
+                      </div>
+                      <!---->
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <nav class="navbar p-0 navbar-expand-lg" id="navbar2">
+              <div
+                id="breadcrumbs-collapse"
+                class="border-top border-bottom navbar-collapse collapse"
+                style="display: none"
+              >
+                <div id="breadcrumbs" class="mt-2 ml-3">
+                  <nav>
+                    <ol class="breadcrumb mt-1">
+                      <li class="breadcrumb-item">
+                        <a href="/" aria-label="Home"
+                          ><i class="fas fa-home"></i
+                        ></a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a> Designer </a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a> Screens </a>
+                      </li>
+                      <li
+                        role="heading"
+                        aria-level="1"
+                        class="breadcrumb-item active"
+                      >
+                        26311
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <style lang="scss" scoped=""></style>
+        </div>
+        <!-- MAIN BODY -->
+        <!-- MAIN BODY -->
+        <!-- MAIN BODY -->
+        <!-- MAIN BODY -->
+
+        <!-- Top command -->
+
+        <div
+          class="flex-grow-1 d-flex flex-column overflow-hidden h-100"
+          id="mainbody"
+        >
+          <div id="main" class="main flex-grow-1 h-100 overflow-auto py-3">
+            <div id="editCss" class="container-fluid px-3">
+              <div role="document" class="row">
+                <div class="col">
+                  <nav>
+                    <div id="nav-tab" role="tablist" class="nav nav-tabs">
+                      <a
+                        id="nav-home-tab"
+                        data-toggle="tab"
+                        href="#nav-home"
+                        role="tab"
+                        aria-controls="nav-home"
+                        aria-selected="true"
+                        class="nav-item nav-link active"
+                        >Group Details</a
+                      >
+                      <a
+                        id="nav-user-tab"
+                        data-toggle="tab"
+                        href="#nav-groups"
+                        role="tab"
+                        aria-selected="false"
+                        class="nav-item nav-link"
+                        >Users</a
+                      >
+                      <a
+                        id="nav-group-tab"
+                        data-toggle="tab"
+                        href="#nav-users"
+                        role="tab"
+                        aria-selected="false"
+                        class="nav-item nav-link"
+                        >Groups</a
+                      >
+                    </div>
+                  </nav>
+                  <div class="card border-top-0">
+                    <!----><!---->
+                    <div class="card-body p-3 border-top-0">
+                      <!----><!---->
+                      <div>
+                        <div role="group" class="`is-valid" id="__BVID__66">
+                          <div id="search-bar" class="mb-3" vcloak="">
+                            <div class="d-flex flex-column flex-md-row">
+                              <!-- FILTER -->
+                              <!-- FILTER -->
+                              <div
+                                class="dropdown mb-3 mb-md-0 ml-md-2 UncategorizedFilterButton"
+                              >
+                                <button
+                                  class="btn btn-outline-primary dropdown-toggle UncategorizedFilter"
+                                  type="button"
+                                  id="dropdownMenuButton"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="fas fa-filter"></i> Category
+                                </button>
+
+                                <div
+                                  class="dropdown-menu dropdown-menu-right w-100"
+                                  aria-labelledby="dropdownMenuButton"
+                                >
+                                  <li>
+                                    <div class="checkbox w-100">
+                                      <label class="ml-2 filter-item">
+                                        <input
+                                          type="checkbox"
+                                          class="p-3 checkbox-input"
+                                          name="categoryFilter"
+                                          value="Uncategorized"
+                                        /><span class="ml-2"
+                                          >Uncategorized</span
+                                        >
+                                      </label>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                  </li>
+
+                                  <li>
+                                    <div class="checkbox">
+                                      <label class="ml-2 filter-item">
+                                        <input
+                                          type="checkbox"
+                                          class="p-3 checkbox-input"
+                                          name="categoryFilter"
+                                          value="Human Resources"
+                                        /><span class="ml-2"
+                                          >Human Resources</span
+                                        >
+                                      </label>
+                                    </div>
+                                  </li>
+                                </div>
+                              </div>
+
+                              <div class="dropdown mb-3 mb-md-0 ml-md-2">
+                                <button
+                                  class="btn btn-outline-primary dropdown-toggle"
+                                  type="button"
+                                  id="dropdownMenuButton"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="fas fa-filter"></i> Owner
+                                </button>
+                                <div
+                                  class="dropdown-menu dropdown-menu-right"
+                                  aria-labelledby="dropdownMenuButton"
+                                >
+                                  <span
+                                    data-v-3f99b023=""
+                                    data-v-6ea5e3fc=""
+                                    class="d-inline-flex pull-left align-items-center"
+                                    data-v-5cc42bfc=""
+                                  >
+                                    <label class="filter-item">
+                                      <input
+                                        type="checkbox"
+                                        class="p-3 checkbox-input ml-2"
+                                        name=""
+                                        value="Uncategorized"
+                                      /><span class="ml-2">
+                                        <a data-v-3f99b023="" href="/profile/2">
+                                          <button
+                                            data-v-3f99b023=""
+                                            title="Admin User"
+                                            href="/profile/2"
+                                            class="avatar-image-button rounded-circle bg-info border-0 align-middle text-white text-center text-uppercase text-nowrap"
+                                            style="
+                                              width: 25px;
+                                              height: 25px;
+                                              font-size: 10px;
+                                              padding: 0px;
+                                              cursor: pointer;
+                                            "
+                                          >
+                                            BB
+                                          </button>
+                                        </a>
+                                        <!---->
+                                        <span class="ml-1"
+                                          >Bartholomew B</span
+                                        ></span
+                                      >
+                                    </label>
+                                  </span>
+                                  <div class="dropdown-divider"></div>
+
+                                  <span
+                                    data-v-3f99b023=""
+                                    data-v-6ea5e3fc=""
+                                    class="d-inline-flex pull-left align-items-center"
+                                    data-v-5cc42bfc=""
+                                  >
+                                    <label class="filter-item">
+                                      <input
+                                        type="checkbox"
+                                        class="p-3 checkbox-input ml-2"
+                                        name=""
+                                        value="Uncategorized"
+                                      /><span class="ml-2">
+                                        <a data-v-3f99b023="" href="/profile/2">
+                                          <button
+                                            data-v-3f99b023=""
+                                            title="Admin User"
+                                            href="/profile/2"
+                                            class="avatar-image-button rounded-circle bg-info border-0 align-middle text-white text-center text-uppercase text-nowrap"
+                                            style="
+                                              width: 25px;
+                                              height: 25px;
+                                              font-size: 10px;
+                                              padding: 0px;
+                                              cursor: pointer;
+                                            "
+                                          >
+                                            HV
+                                          </button>
+                                        </a>
+                                        <!---->
+                                        Hunter Van Lear</span
+                                      >
+                                    </label>
+                                  </span>
+                                  <div class="dropdown-divider"></div>
+
+                                  <span
+                                    data-v-3f99b023=""
+                                    data-v-6ea5e3fc=""
+                                    class="d-inline-flex pull-left align-items-center"
+                                    data-v-5cc42bfc=""
+                                  >
+                                    <label class="filter-item">
+                                      <input
+                                        type="checkbox"
+                                        class="p-3 checkbox-input ml-2"
+                                        name=""
+                                        value="Uncategorized"
+                                      /><span class="ml-2">
+                                        <a data-v-3f99b023="" href="/profile/2">
+                                          <button
+                                            data-v-3f99b023=""
+                                            title="Admin User"
+                                            href="/profile/2"
+                                            class="avatar-image-button rounded-circle bg-info border-0 align-middle text-white text-center text-uppercase text-nowrap"
+                                            style="
+                                              width: 25px;
+                                              height: 25px;
+                                              font-size: 10px;
+                                              padding: 0px;
+                                              cursor: pointer;
+                                            "
+                                          >
+                                            AU
+                                          </button>
+                                        </a>
+                                        <!---->
+                                        Admin User</span
+                                      >
+                                    </label>
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="mb-3 mb-md-0 ml-md-2">
+                                <button
+                                  class="btn btn-outline-primary dropdown-toggle UncategorizedFilter"
+                                  type="button"
+                                  id="dropdownMenuButton"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="fas fa-plus"></i> More
+                                </button>
+                              </div>
+                              <li
+                                class="separator separator-filter d-lg-block mt-1"
+                              ></li>
+                              <div class="mb-3 mb-md-0 ml-md-2 text-center">
+                                <a
+                                  href="#"
+                                  id="create_process"
+                                  data-toggle="modal"
+                                  data-target="#addProcess"
+                                  class="btn btn-reset w-100 text-secondary"
+                                >
+                                  Reset
+                                </a>
+                              </div>
+                              <!-- FILTER END -->
+                              <!-- FILTER END -->
+
+                              <!-- SEARCH BAR -->
+                              <!-- SEARCH BAR -->
+
+                              <div class="input-group w-100 ml-2 mr-2">
+                                <input
+                                  placeholder="Search all processes"
+                                  class="form-control search-input"
+                                />
+                                <div class="input-group-append">
+                                  <button
+                                    type="button"
+                                    data-original-title="Search"
+                                    class="btn btn-primary btn-search"
+                                  >
+                                    <i class="fas fa-search"></i>
+                                  </button>
+                                </div>
+                              </div>
+                              <!-- SEARCH BAR END -->
+                              <!-- SEARCH BAR END -->
+
+                              <!-- //PRIMARY BUTTON -->
+                              <!-- //PRIMARY BUTTON -->
+                              <div
+                                class="d-flex ml-md-0 flex-column flex-md-row text-center ml-2"
+                              >
+                                <div class="btn-group save-btn-group">
+                                  <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-plus"></i> PROCESS
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                  >
+                                    <i class="fa fa-chevron-down"></i>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                  </button>
+                                  <div
+                                    class="dropdown-menu dropdown-menu-right mt-1 p-2 mb-1"
+                                    aria-labelledby="dropdownMenuLink"
+                                  >
+                                    <a class="dropdown-item p-2" href="#"
+                                      ><i class="fas fa-file-import mr-2"></i>
+                                      Import Process</a
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- //PRIMARY BUTTON END -->
+                              <!-- //PRIMARY BUTTON END -->
+                            </div>
+                          </div>
+                          <div id="profileMenu" class="mt-3 d-flex">
+                            <!-- //SEARCH BAR -->
+
+                            <!-- // MODAL START
+                                 -->
+
+                            <!-- ///MODAL END -->
+                          </div>
+                          <div
+                            id=""
+                            role="tooltip"
+                            tabindex="-1"
+                            data-v-0d7c46a7=""
+                            class="popover b-popover bs-popover-bottom"
+                            x-placement="bottom"
+                            style="left: 0px; will-change: transform"
+                          >
+                            <div class="card card-body table-card p-0">
+                              <table
+                                class="table table-hover table-responsive-lg"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th class="sortable">
+                                      Name <i class="sort-icon fas fa-sort"></i>
+                                    </th>
+                                    <th class="sortable">
+                                      Status
+                                      <i class="sort-icon fas fa-sort"></i>
+                                    </th>
+                                    <th class="sortable">
+                                      Owner
+                                      <i class="sort-icon fas fa-sort"></i>
+                                    </th>
+                                    <th class="sortable">
+                                      Category
+                                      <i class="sort-icon fas fa-sort"></i>
+                                    </th>
+                                    <th class="sortable">
+                                      Created
+                                      <i class="sort-icon fas fa-sort"></i>
+                                    </th>
+                                    <th class="sortable">
+                                      Modified
+                                      <i class="sort-icon fas fa-sort"></i>
+                                    </th>
+                                  </tr>
+                                </thead>
+
+                                <tbody>
+                                  <tr>
+                                    <!-- <td><div class="iconTray"> <i class="fas fa-exclamation-circle  text-warning"></i><i class="fas fa-check-circle ml-1"></i></div></td> -->
+                                    <td>
+                                      <div class="slatGroup">
+                                        <p class="slatName">New Test Process</p>
+                                        <small class="text-muted">
+                                          Lorem ipsum dolor sit amet consectetur
+                                          adipisicing elit
+                                        </small>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <span
+                                        class="badge badge-pill badge-success"
+                                        >Active</span
+                                      >
+                                    </td>
+                                    <td>
+                                      <span
+                                        data-v-3f99b023=""
+                                        data-v-6ea5e3fc=""
+                                        class="d-inline-flex pull-left align-items-center"
+                                        data-v-5cc42bfc=""
+                                      >
+                                        <a data-v-3f99b023="" href="/profile/2">
+                                          <button
+                                            data-v-3f99b023=""
+                                            title="Admin User"
+                                            href="/profile/2"
+                                            class="avatar-image-button rounded-circle bg-info border-0 align-middle text-white text-center text-uppercase text-nowrap"
+                                            style="
+                                              width: 25px;
+                                              height: 25px;
+                                              font-size: 10px;
+                                              padding: 0px;
+                                              cursor: pointer;
+                                            "
+                                          >
+                                            BB
+                                          </button>
+                                        </a>
+                                        <!---->
+                                        <span class="ml-1"
+                                          >Bartholomew B</span
+                                        ></span
+                                      >
+                                    </td>
+                                    <td>Uncategorized</td>
+                                    <td>
+                                      <div class="slatGroup">
+                                        <p class="slatName">09/07/2021</p>
+                                        <small class="text-muted">
+                                          04:15:30 pm
+                                        </small>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="slatGroup">
+                                        <p class="slatName">09/07/2021</p>
+                                        <small class="text-muted">
+                                          04:15:30 pm
+                                        </small>
+                                      </div>
+                                    </td>
+
+                                    <td align="right">
+                                      <div class="dropdown show">
+                                        <a
+                                          class="btn btn-outline-secondary slatDropDown mr-3"
+                                          href="#"
+                                          role="button"
+                                          id="dropdownMenuLink"
+                                          data-toggle="dropdown"
+                                          aria-haspopup="true"
+                                          aria-expanded="false"
+                                        >
+                                          <i class="dots fas fa-ellipsis-h"></i>
+                                        </a>
+
+                                        <div
+                                          class="dropdown-menu dropdown-menu-right dropdown-slat mt-1 p-2 mb-1"
+                                          aria-labelledby="dropdownMenuLink"
+                                        >
+                                          <a class="dropdown-item p-2" href="#">
+                                            <i class="far fa-edit mr-2"></i>
+                                            Edit Process</a
+                                          >
+
+                                          <a class="dropdown-item p-2" href="#"
+                                            ><i class="far fa-clone mr-2"></i>
+                                            Copy Process</a
+                                          >
+                                          <a class="dropdown-item p-2" href="#"
+                                            ><i
+                                              class="fas fa-file-export mr-2"
+                                            ></i>
+                                            Export Process</a
+                                          >
+                                          <a class="dropdown-item p-2" href="#"
+                                            ><i class="fas fa-cog mr-2"></i>
+                                            Configure Process</a
+                                          >
+                                          <a
+                                            class="dropdown-item dropdown-delete p-2"
+                                            href="#"
+                                            ><i
+                                              class="far fa-trash-alt mr-2"
+                                            ></i>
+                                            Delete Process</a
+                                          >
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <!-- <td><div class="iconTray"> <i class="fas fa-exclamation-circle  text-warning"></i><i class="fas fa-check-circle ml-1"></i></div></td> -->
+                                    <td>
+                                      <div class="slatGroup">
+                                        <p class="slatName">New Test Process</p>
+                                        <small class="text-muted">
+                                          Lorem ipsum dolor sit amet consectetur
+                                          adipisicing elit
+                                        </small>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <span
+                                        class="badge badge-pill badge-warning"
+                                        ><i
+                                          class="fas fa-exclamation-triangle"
+                                        ></i
+                                        >Warning</span
+                                      >
+                                    </td>
+                                    <td>
+                                      <span
+                                        data-v-3f99b023=""
+                                        data-v-6ea5e3fc=""
+                                        class="d-inline-flex pull-left align-items-center"
+                                        data-v-5cc42bfc=""
+                                      >
+                                        <a data-v-3f99b023="" href="/profile/2">
+                                          <button
+                                            data-v-3f99b023=""
+                                            title="Admin User"
+                                            href="/profile/2"
+                                            class="avatar-image-button rounded-circle bg-info border-0 align-middle text-white text-center text-uppercase text-nowrap"
+                                            style="
+                                              width: 25px;
+                                              height: 25px;
+                                              font-size: 10px;
+                                              padding: 0px;
+                                              cursor: pointer;
+                                            "
+                                          >
+                                            BB
+                                          </button>
+                                        </a>
+                                        <!---->
+                                        <span class="ml-1"
+                                          >Bartholomew B</span
+                                        ></span
+                                      >
+                                    </td>
+                                    <td>Uncategorized</td>
+                                    <td>
+                                      <div class="slatGroup">
+                                        <p class="slatName">09/07/2021</p>
+                                        <small class="text-muted">
+                                          04:15:30 pm
+                                        </small>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="slatGroup">
+                                        <p class="slatName">09/07/2021</p>
+                                        <small class="text-muted">
+                                          04:15:30 pm
+                                        </small>
+                                      </div>
+                                    </td>
+
+                                    <td align="right">
+                                      <div class="dropdown show">
+                                        <a
+                                          class="btn btn-outline-secondary slatDropDown mr-3"
+                                          href="#"
+                                          role="button"
+                                          id="dropdownMenuLink"
+                                          data-toggle="dropdown"
+                                          aria-haspopup="true"
+                                          aria-expanded="false"
+                                        >
+                                          <i class="dots fas fa-ellipsis-h"></i>
+                                        </a>
+
+                                        <div
+                                          class="dropdown-menu dropdown-menu-right dropdown-slat mt-1 p-2 mb-1"
+                                          aria-labelledby="dropdownMenuLink"
+                                        >
+                                          <a class="dropdown-item p-2" href="#">
+                                            <i class="far fa-edit mr-2"></i>
+                                            Edit Process</a
+                                          >
+
+                                          <a class="dropdown-item p-2" href="#"
+                                            ><i class="far fa-clone mr-2"></i>
+                                            Copy Process</a
+                                          >
+                                          <a class="dropdown-item p-2" href="#"
+                                            ><i
+                                              class="fas fa-file-export mr-2"
+                                            ></i>
+                                            Export Process</a
+                                          >
+                                          <a class="dropdown-item p-2" href="#"
+                                            ><i class="fas fa-cog mr-2"></i>
+                                            Configure Process</a
+                                          >
+                                          <a
+                                            class="dropdown-item dropdown-delete p-2"
+                                            href="#"
+                                            ><i
+                                              class="far fa-trash-alt mr-2"
+                                            ></i>
+                                            Delete Process</a
+                                          >
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <!-- <td><div class="iconTray"> <i class="fas fa-exclamation-circle  text-warning"></i><i class="fas fa-check-circle ml-1"></i></div></td> -->
+                                    <td>
+                                      <div class="slatGroup">
+                                        <p class="slatName">New Test Process</p>
+                                        <small class="text-muted">
+                                          Lorem ipsum dolor sit amet consectetur
+                                          adipisicing elit
+                                        </small>
+                                      </div>
+                                    </td>
+                                    <td class="">
+                                      <div class="slatGroup">
+                                        <span
+                                          class="badge badge-pill badge-success"
+                                          >Active</span
+                                        >
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <span
+                                        data-v-3f99b023=""
+                                        data-v-6ea5e3fc=""
+                                        class="d-inline-flex pull-left align-items-center"
+                                        data-v-5cc42bfc=""
+                                      >
+                                        <a data-v-3f99b023="" href="/profile/2">
+                                          <button
+                                            data-v-3f99b023=""
+                                            title="Admin User"
+                                            href="/profile/2"
+                                            class="avatar-image-button rounded-circle bg-info border-0 align-middle text-white text-center text-uppercase text-nowrap"
+                                            style="
+                                              width: 25px;
+                                              height: 25px;
+                                              font-size: 10px;
+                                              padding: 0px;
+                                              cursor: pointer;
+                                            "
+                                          >
+                                            BB
+                                          </button>
+                                        </a>
+                                        <!---->
+                                        <span class="ml-1"
+                                          >Bartholomew B</span
+                                        ></span
+                                      >
+                                    </td>
+                                    <td>Uncategorized</td>
+                                    <td>
+                                      <div class="slatGroup">
+                                        <p class="slatName">09/07/2021</p>
+                                        <small class="text-muted">
+                                          04:15:30 pm
+                                        </small>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="slatGroup">
+                                        <p class="slatName">09/07/2021</p>
+                                        <small class="text-muted">
+                                          04:15:30 pm
+                                        </small>
+                                      </div>
+                                    </td>
+
+                                    <td align="right">
+                                      <div class="dropdown show">
+                                        <a
+                                          class="btn btn-outline-secondary slatDropDown mr-3"
+                                          href="#"
+                                          role="button"
+                                          id="dropdownMenuLink"
+                                          data-toggle="dropdown"
+                                          aria-haspopup="true"
+                                          aria-expanded="false"
+                                        >
+                                          <i class="dots fas fa-ellipsis-h"></i>
+                                        </a>
+
+                                        <div
+                                          class="dropdown-menu dropdown-menu-right dropdown-slat mt-1 p-2 mb-1"
+                                          aria-labelledby="dropdownMenuLink"
+                                        >
+                                          <a class="dropdown-item p-2" href="#">
+                                            <i class="far fa-edit mr-2"></i>
+                                            Edit Process</a
+                                          >
+
+                                          <a class="dropdown-item p-2" href="#"
+                                            ><i class="far fa-clone mr-2"></i>
+                                            Copy Process</a
+                                          >
+                                          <a class="dropdown-item p-2" href="#"
+                                            ><i
+                                              class="fas fa-file-export mr-2"
+                                            ></i>
+                                            Export Process</a
+                                          >
+                                          <a class="dropdown-item p-2" href="#"
+                                            ><i class="fas fa-cog mr-2"></i>
+                                            Configure Process</a
+                                          >
+                                          <a
+                                            class="dropdown-item dropdown-delete p-2"
+                                            href="#"
+                                            ><i
+                                              class="far fa-trash-alt mr-2"
+                                            ></i>
+                                            Delete Process</a
+                                          >
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <!-- //end table card -->
+                            <!-- PAGINATION START -->
+                            <!-- PAGINATION START -->
+                            <div
+                              class="paginationContainer justify-content-between d-flex mt-3"
+                            >
+                              <div class="p-2">
+                                <a
+                                  href="https://processmaker.gitbook.io/processmaker/designing-processes/viewing-processes/view-the-list-of-processes/create-a-process"
+                                  target="_blank"
+                                  ><i class="fas fa-book mr-1"></i>View process
+                                  documentation</a
+                                >
+                              </div>
+                              <div class="p-2 mx-auto font-weight-bold">
+                                1-50 of 1000 Processes
+                              </div>
+                              <nav aria-label="Page navigation ml-auto ">
+                                <ul class="pagination">
+                                  <li class="page-item">
+                                    <a
+                                      class="page-link"
+                                      href="#"
+                                      aria-label="Previous"
+                                    >
+                                      <i class="fas fa-chevron-left"></i>
+                                      <span class="sr-only">Previous</span>
+                                    </a>
+                                  </li>
+                                  <li class="page-item active">
+                                    <a class="page-link" href="#">1</a>
+                                  </li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                  </li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                  </li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">4</a>
+                                  </li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">5</a>
+                                  </li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">....</a>
+                                  </li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">20</a>
+                                  </li>
+                                  <li class="page-item">
+                                    <a
+                                      class="page-link"
+                                      href="#"
+                                      aria-label="Next"
+                                    >
+                                      <i class="fas fa-chevron-right"></i>
+                                      <span class="sr-only">Next</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </nav>
+                            </div>
+                            <!-- PAGINATION END -->
+                            <!-- PAGINATION END -->
+                          </div>
+                          <!-- //END DL -->
+                        </div>
+
+                        <!---->
+                      </div>
+                    </div>
+                    <!----><!---->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <!-- Code injected by live-server -->
+  </body>
+</html>
