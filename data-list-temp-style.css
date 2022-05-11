@@ -1,5 +1,48 @@
 
 
+
+
+.b-avatar-group .b-avatar-group-inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.b-avatar-group .b-avatar {
+  border: 1px solid #dee2e6;
+}
+
+.b-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 1;
+  max-width: 100%;
+  max-height: auto;
+  text-align: center;
+  overflow: visible;
+  position: relative;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.rounded-circle {
+  border-radius: 50%!important;
+}
+
+.badge-secondary {
+  color: #fff;
+  background-color: #6c757d;
+}
+
+.b-avatar-text{
+  font-size: 12px;
+  cursor: default;
+}
+
 li > a {
   color: white;
 }
