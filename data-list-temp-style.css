@@ -38,6 +38,10 @@
   background-color: #6c757d;
 }
 
+.badge-info {
+  background-color: #114a77;
+}
+
 .b-avatar-text{
   font-size: 12px;
   cursor: default;
@@ -69,7 +73,8 @@ a,.text-primary{
 }
 
 .badge{
-  padding:5px
+  padding:5px;
+  cursor: default;
 }
 
 .sidebar {
