@@ -33,6 +33,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="data-list-temp-style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+
     <title>Data List Template</title>
   </head>
   <body>
@@ -222,230 +229,104 @@
                             <div class="d-flex flex-column flex-md-row">
                               <!-- FILTER -->
                               <!-- FILTER -->
-                              <div
-                                class="dropdown mb-3 mb-md-0 ml-md-2 UncategorizedFilterButton"
-                              >
-                                <button
-                                  class="btn btn-outline-primary dropdown-toggle UncategorizedFilter"
-                                  type="button"
-                                  id="dropdownMenuButton"
-                                  data-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                >
-                                  <i class="fas fa-filter"></i> Category
-                                </button>
-
-                                <div
-                                  class="dropdown-menu dropdown-menu-right w-100"
-                                  aria-labelledby="dropdownMenuButton"
-                                >
-                                  <li>
-                                    <div class="checkbox w-100">
-                                      <label class="ml-2 filter-item">
-                                        <input
-                                          type="checkbox"
-                                          class="p-3 checkbox-input"
-                                          name="categoryFilter"
-                                          value="Uncategorized"
-                                        /><span class="ml-2"
-                                          >Uncategorized</span
-                                        >
-                                      </label>
-                                    </div>
-                                    <div class="dropdown-divider"></div>
-                                  </li>
-
-                                  <li>
-                                    <div class="checkbox">
-                                      <label class="ml-2 filter-item">
-                                        <input
-                                          type="checkbox"
-                                          class="p-3 checkbox-input"
-                                          name="categoryFilter"
-                                          value="Human Resources"
-                                        /><span class="ml-2"
-                                          >Human Resources</span
-                                        >
-                                      </label>
-                                    </div>
-                                  </li>
-                                </div>
-                              </div>
-
-                              <div class="dropdown mb-3 mb-md-0 ml-md-2">
-                                <button
-                                  class="btn btn-outline-primary dropdown-toggle"
-                                  type="button"
-                                  id="dropdownMenuButton"
-                                  data-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                >
-                                  <i class="fas fa-filter"></i> Owner
-                                </button>
-                                <div
-                                  class="dropdown-menu dropdown-menu-right"
-                                  aria-labelledby="dropdownMenuButton"
-                                >
-                                  <span
-                                    data-v-3f99b023=""
-                                    data-v-6ea5e3fc=""
-                                    class="d-inline-flex pull-left align-items-center"
-                                    data-v-5cc42bfc=""
-                                  >
-                                    <label class="filter-item">
-                                      <input
-                                        type="checkbox"
-                                        class="p-3 checkbox-input ml-2"
-                                        name=""
-                                        value="Uncategorized"
-                                      /><span class="ml-2">
-                                        <a data-v-3f99b023="" href="/profile/2">
-                                          <button
-                                            data-v-3f99b023=""
-                                            title="Admin User"
-                                            href="/profile/2"
-                                            class="avatar-image-button rounded-circle bg-info border-0 align-middle text-white text-center text-uppercase text-nowrap"
-                                            style="
-                                              width: 25px;
-                                              height: 25px;
-                                              font-size: 10px;
-                                              padding: 0px;
-                                              cursor: pointer;
-                                            "
-                                          >
-                                            BB
-                                          </button>
-                                        </a>
-                                        <!---->
-                                        <span class="ml-1"
-                                          >Bartholomew B</span
-                                        ></span
-                                      >
-                                    </label>
-                                  </span>
-                                  <div class="dropdown-divider"></div>
-
-                                  <span
-                                    data-v-3f99b023=""
-                                    data-v-6ea5e3fc=""
-                                    class="d-inline-flex pull-left align-items-center"
-                                    data-v-5cc42bfc=""
-                                  >
-                                    <label class="filter-item">
-                                      <input
-                                        type="checkbox"
-                                        class="p-3 checkbox-input ml-2"
-                                        name=""
-                                        value="Uncategorized"
-                                      /><span class="ml-2">
-                                        <a data-v-3f99b023="" href="/profile/2">
-                                          <button
-                                            data-v-3f99b023=""
-                                            title="Admin User"
-                                            href="/profile/2"
-                                            class="avatar-image-button rounded-circle bg-info border-0 align-middle text-white text-center text-uppercase text-nowrap"
-                                            style="
-                                              width: 25px;
-                                              height: 25px;
-                                              font-size: 10px;
-                                              padding: 0px;
-                                              cursor: pointer;
-                                            "
-                                          >
-                                            HV
-                                          </button>
-                                        </a>
-                                        <!---->
-                                        Hunter Van Lear</span
-                                      >
-                                    </label>
-                                  </span>
-                                  <div class="dropdown-divider"></div>
-
-                                  <span
-                                    data-v-3f99b023=""
-                                    data-v-6ea5e3fc=""
-                                    class="d-inline-flex pull-left align-items-center"
-                                    data-v-5cc42bfc=""
-                                  >
-                                    <label class="filter-item">
-                                      <input
-                                        type="checkbox"
-                                        class="p-3 checkbox-input ml-2"
-                                        name=""
-                                        value="Uncategorized"
-                                      /><span class="ml-2">
-                                        <a data-v-3f99b023="" href="/profile/2">
-                                          <button
-                                            data-v-3f99b023=""
-                                            title="Admin User"
-                                            href="/profile/2"
-                                            class="avatar-image-button rounded-circle bg-info border-0 align-middle text-white text-center text-uppercase text-nowrap"
-                                            style="
-                                              width: 25px;
-                                              height: 25px;
-                                              font-size: 10px;
-                                              padding: 0px;
-                                              cursor: pointer;
-                                            "
-                                          >
-                                            AU
-                                          </button>
-                                        </a>
-                                        <!---->
-                                        Admin User</span
-                                      >
-                                    </label>
-                                  </span>
-                                </div>
-                              </div>
-                              <div class="mb-3 mb-md-0 ml-md-2">
-                                <button
-                                  class="btn btn-outline-primary dropdown-toggle UncategorizedFilter"
-                                  type="button"
-                                  id="dropdownMenuButton"
-                                  data-toggle="dropdown"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                >
-                                  <i class="fas fa-plus"></i> More
-                                </button>
-                              </div>
-                              <li
-                                class="separator separator-filter d-lg-block mt-1"
-                              ></li>
-                              <div class="mb-3 mb-md-0 ml-md-2 text-center">
+                              <div class="dropdown show">
                                 <a
+                                  class="btn btn-outline-secondary mr-3"
                                   href="#"
-                                  id="create_process"
-                                  data-toggle="modal"
-                                  data-target="#addProcess"
-                                  class="btn btn-reset w-100 text-secondary"
+                                  role="button"
+                                  id="dropdownFilterLink"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
                                 >
-                                  Reset
+                                  <i class="fas fa-sliders-h"></i> Filters
                                 </a>
-                              </div>
-                              <!-- FILTER END -->
-                              <!-- FILTER END -->
 
-                              <!-- SEARCH BAR -->
-                              <!-- SEARCH BAR -->
+                                <div
+                                  class="dropdown-menu dropdown-menu-right dropdown-menu-filter ml-4 dropdown-slat mt-1 p-2 mb-1"
+                                  aria-labelledby="dropdownFilterLink"
+                                >
+                                  <div class="form-group">
+                                    <span class="mb-2 filter-label"
+                                      >Category</span
+                                    >
 
-                              <div class="input-group w-100 ml-2 mr-2">
-                                <input
-                                  placeholder="Search all processes"
-                                  class="form-control search-input"
-                                />
-                                <div class="input-group-append">
-                                  <button
-                                    type="button"
-                                    data-original-title="Search"
-                                    class="btn btn-primary btn-search"
+                                    <select
+                                      id="choices-multiple-remove-button"
+                                      class=""
+                                      placeholder=""
+                                      multiple
+                                    >
+                                      <option
+                                        id="example"
+                                        class="select-item"
+                                        value="Uncategorized"
+                                      >
+                                        Uncategorized
+                                      </option>
+                                      <option
+                                        class="select-item"
+                                        value="Finance"
+                                      >
+                                        Finance
+                                      </option>
+                                      <option value="Billing">Billing</option>
+                                    </select>
+                                  </div>
+
+                                  <div class="form-group mt-2">
+                                    <span class="mb-2 filter-label"
+                                      >Status</span
+                                    >
+
+                                    <select
+                                      id="choices-multiple-remove-button"
+                                      class=""
+                                      placeholder=""
+                                      multiple
+                                    >
+                                      <option value="HTML">Inactive</option>
+                                      <option value="Jquery">Active</option>
+                                      <option value="CSS">Warning</option>
+                                    </select>
+                                  </div>
+                                  <hr />
+                                  <div
+                                    class="btn-group-filter mt-2 d-flex flex-row-reverse"
                                   >
-                                    <i class="fas fa-search"></i>
-                                  </button>
+                                    <button
+                                      class="btn btn-sm btn-primary btn-filter"
+                                    >
+                                      Apply
+                                    </button>
+                                    <button
+                                      class="btn btn-sm btn-outline-secondary mr-2 btn-reset"
+                                    >
+                                      Reset
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- FILTER END -->
+                              <!-- FILTER END -->
+
+                              <!-- SEARCH BAR -->
+                              <!-- SEARCH BAR -->
+
+                              <div class="flex-grow-1 mr-3">
+                                <div class="main mb-3 mb-md-0">
+                                  <div class="form-group form-group-search">
+                                    <span
+                                      class="fa fa-search form-control-icon"
+                                    ></span>
+                                    <input
+                                      type="text"
+                                      id="searchBar"
+                                      class="form-control"
+                                      placeholder="Search all processes"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <!-- SEARCH BAR END -->
@@ -485,13 +366,20 @@
                               <!-- //PRIMARY BUTTON END -->
                             </div>
                           </div>
-                          <div id="profileMenu" class="mt-3 d-flex">
-                            <!-- //SEARCH BAR -->
-
-                            <!-- // MODAL START
-                                 -->
-
-                            <!-- ///MODAL END -->
+                          <div
+                            id=""
+                            class="mt-3 mb-2 d-flex filtered-by-container"
+                          >
+                            <!-- <span class="filter-status-container ml-1"
+                              ><span class="filtered-start font-weight-bold"
+                                >Filtered By:
+                              </span>
+                              <span class="text-muted"> Status </span>
+                              |
+                              <span class="text-muted"> Owner </span>
+                              |
+                              <span class="text-primary"> Edit</span>
+                            </span> -->
                           </div>
                           <div
                             id=""
@@ -548,8 +436,8 @@
                                     </td>
                                     <td>
                                       <span
-                                        class="badge badge-pill badge-success"
-                                        >Active</span
+                                        class="badge badge-pill badge-secondary"
+                                        >Inactive</span
                                       >
                                     </td>
                                     <td>
@@ -899,7 +787,7 @@
                                   documentation</a
                                 >
                               </div>
-                              <div class="p-2 mx-auto font-weight-bold">
+                              <div class="p-2 mx-auto">
                                 1-50 of 1000 Processes
                               </div>
                               <nav aria-label="Page navigation ml-auto ">
@@ -966,6 +854,7 @@
         </div>
       </div>
     </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

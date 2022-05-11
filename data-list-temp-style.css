@@ -8,6 +8,10 @@ a,.text-primary{
   color:#0872c2 ;
 }
 
+.text-primary{
+  color: #0872c2 !important;
+}
+
 .text-info {
   color:#114a77 !important;
 }
@@ -166,15 +170,23 @@ End LEft side bar */
   position: absolute;
   z-index: 2;
   display: block;
-  width: 2.375 rem;
-  height: 2.375 rem;
+  width: 2.375rem;
+  height: 2.375rem;
   line-height: 2.375rem;
   text-align: center;
   pointer-events: none;
   color: #aaa;
-  margin-left: 10px;
+
 }
 
+.form-control{
+  padding: 0.375rem 2.2rem;
+}
+
+
+.form-group{
+  margin-bottom:unset;
+}
 
 
 i.fas.fa-angle-down.rotate-icon {
@@ -201,9 +213,7 @@ button.btn.btn-primary.dropdown-toggle.dropdown-toggle-split {
   border-left-color: white;
 }
 
-input#searchBar {
-  background-color: #aaaaaa1a;
-}
+
 
 .element-icon-group {
   color: rgb(89, 89, 89);
@@ -253,6 +263,49 @@ a:active,
 a:hover {
   text-decoration: none;
 }
+
+/* MULTISELECT PLUGIN */
+
+.choices__list--multiple .choices__item[data-deletable] {
+  padding-right: 5px;
+}
+
+.choices{
+  margin-top: .5rem;
+}
+
+.choices__list--multiple .choices__item {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 3.75px;
+  margin-bottom: 3.75px;
+  background-color: #00875a !important;
+  border: 1px solid #00875a !important;
+  color: #fff;
+  word-break: break-all;
+}
+
+.choices__inner {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 5px 7.5px 3.75px !important;
+  border: 1px solid #ddd;
+  border-radius: 2.5px;
+  font-size: 14px;
+  max-height: 40px !important;
+  min-height: unset !important;
+  overflow: hidden;
+}
+
+
+/* 
+MULTISELECT PLUGIN */
 
 
 
@@ -397,6 +450,18 @@ a#dropdownMenuLink {
 }
 .dropdown-menu.dropdown-menu-right.dropdown-slat {
   box-shadow: 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%), 0px 5px 5px -3px rgb(0 0 0 / 20%);
+}
+
+.dropdown-menu-filter{
+  min-width: 500px;
+}
+
+.filter-label{
+  font-size: 14px;
+}
+
+.choices {
+  font-size:14px !important;
 }
 
 
@@ -646,3 +711,4 @@ button.btn.btn-primary
 .statusGroup{
   display: flex;
 }
+
