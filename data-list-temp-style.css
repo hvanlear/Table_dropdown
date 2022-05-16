@@ -197,6 +197,10 @@ End LEft side bar */
   font-size: 0.875rem;
 }
 
+div#breadcrumbs-collapse {
+  height: 47px;
+}
+
 .card-header {
   background-color: white;
 }
