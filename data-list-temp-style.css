@@ -33,6 +33,10 @@
   border-radius: 50%!important;
 }
 
+.badge{
+  font-weight: normal;
+}
+
 .badge-secondary {
   color: #fff;
   background-color: #6c757d;
