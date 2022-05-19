@@ -255,7 +255,11 @@ i.fas.fa-angle-down.rotate-icon {
   color: #0872c2;
 }
 
-
+.btn-secondary-active{
+    color: #fff !important;
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+}
 
 .btn-lg{
   font-size: 1rem;
@@ -515,6 +519,10 @@ a#dropdownMenuLink {
 
 .filter-label{
   font-size: 14px;
+}
+
+.filter-edit{
+  cursor: pointer;
 }
 
 .choices {
